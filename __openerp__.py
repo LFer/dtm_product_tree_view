@@ -1,7 +1,7 @@
 {
     'name': 'Adaptacion Productos',
     'version': '1.0',
-    'depends': ['base', 'product'],
+    'depends': ['base', 'product','dtm_inco_security'],
     'author': 'Felipe Ferreira',
     'website': 'http://www.datamatic.com.uy',
     'category': 'Datamatic',

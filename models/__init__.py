@@ -1,2 +1,1 @@
-__author__ = 'LFer'
-
+from . import product_product
