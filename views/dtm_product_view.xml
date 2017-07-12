@@ -20,8 +20,8 @@
                     <field name="uom_id" invisible="0"/>
                 </field>
                 <field name="name" position="after">
-                    <field name="standard_price" groups="dtm_inco_security.group_inco_ver_costo"/>
-                    <field name="list_price"/>
+                    <field name="standard_price" string="Costo" groups="dtm_inco_security.group_inco_ver_costo"/>
+                    <field name="other_currency_list_price" string="Venta"/>
                 </field>
             </field>
         </record>
@@ -36,14 +36,21 @@
                     <attribute name="invisible">1</attribute>
                 </field>
                 <field name="ean13" position="attributes">
+
                     <attribute name="invisible">1</attribute>
                 </field>
                 <field name="lst_price" position="before">
-                    <field name="standard_price" groups="dtm_inco_security.group_inco_ver_costo"/>
+                    <!--<field name="other_currency_list_price" string="Precio de Venta"/>-->
+                    <field name="standard_price" string="Costo" groups="dtm_inco_security.group_inco_ver_costo"/>
+                </field>
+
+                <field name="lst_price" position="attributes">
+                    <attribute name="invisible">1</attribute>
                 </field>
             </field>
         </record>
-        
+
+
         <record id="view_product_product_mod2_tree" model="ir.ui.view">
             <field name="name">product.product.mod2.tree.inherit</field>
             <field name="model">product.product</field>
